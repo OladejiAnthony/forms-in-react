@@ -1,7 +1,8 @@
 import React, {useRef, useEffect} from "react";
 
-//useRef () Hook - to access the value of our inout field uncontrolled input method
-//1. it target DOM nodes/elements. 2. it preserves input field values during re-render
+//useRef () Hook - to access the value of our input field uncontrolled input method
+//1. it target DOM nodes/elements. 
+//2. it preserves input field values during re-render
 
 function UnControlledInputs () {
   const nameInputRef = useRef(null);
@@ -16,9 +17,10 @@ function UnControlledInputs () {
     console.log(enteredName, enteredJob);
   }
 
-//implem
+//implement
   useEffect(() => {
     nameInputRef.current.focus()
+    //focus on the name field on render
   },[])
 
   return (
@@ -30,14 +32,16 @@ function UnControlledInputs () {
             <div>
               <label htmlFor="name">Name: </label>
               <input
-                type="text" name="name"
+                type="text" 
+                name="name"
                 ref={nameInputRef}
               />
             </div>
             <div>
               <label htmlFor="Job">Job: </label>
               <input
-                type="text" name="job"
+                type="text" 
+                name="job"
                 ref={jobInputRef}
               />
             </div>
